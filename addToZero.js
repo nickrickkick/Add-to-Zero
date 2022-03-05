@@ -5,9 +5,16 @@ let array = [28, 43, -12, 30, 4, 0, 12]
 
 // Write your solution below:
 let counter = 0;
-while (counter < array.length)
-for (i = 0; i < array.length; i++){
-    if (array[counter] + array[i] === 0){
-        console.log("true");
-    } 
+let ifTrue = false;
+while (counter < array.length) {
+   
+    for (i = 0; i < array.length; i++){
+        if (array[counter] + array[i] === 0 && i != counter){
+            //console.log(`${array[counter]} + ${array[i]} = 0`);
+            ifTrue = true;
+        } 
+    }
+
+    ++counter;
 }
+ifTrue === true ? console.log("True") : console.log("False");
